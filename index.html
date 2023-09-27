@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .success, .error{
+            color: white;
+            padding:5px;
+            margin: 5px 0 15px 0;
+        }
+        .success{
+            background: green;
+        }
+        .error{
+            background: red;
+        }
+    </style>    
+</head>        
+<body>
+<!-- Todo-->
+<div class="container m-5 p-2 rounded mx-auto bg-light shadow">
+            <!-- App title section -->
+            <div class="row m-1 p-4">
+                <div class="col">
+                    <div class="p-1 h1 text-primary text-center mx-auto display-inline-block">
+                        <i class="fa fa-check bg-primary text-white rounded p-2"></i>
+                        <u>My Reminders/ Todos</u>
+                    </div>
+                </div>
+            </div>
+            <!-- Create todo section -->
+            <div class="row m-1 p-3">
+                <div class="col col-6 mx-auto">
+                    <div class="row bg-gray rounded shadow-sm p-2 add-todo-wrapper align-items-center justify-content-center">
+                        <div class="mb-3">
+                            <input class="form-control form-control-lg border-0 add-todo-input bg-gray rounded" 
+                            type="text" 
+                            placeholder="Title .."
+                            id="title">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control form-control-lg border-0 add-todo-input bg-gray rounded" 
+                            type="text" 
+                            placeholder="Description .."
+                            id="description"></textarea>
+                        </div>
+                        <!-- <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">IsCompleted</label>
+                        </div> -->
+                        <div class="d-grid gap-2">
+                            <button id="btnSave" type="button" class="btn btn-primary btn-lg">Add</button>
+                            <button id="btnDelete" class="btn btn-danger hidden">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-2 mx-4 border-black-25 border-bottom"></div>
+
+        <!-- Todo list section -->
+        <div class="row mx-1 px-5 pb-3 w-80">
+            <div class="col mx-auto">
+                <!-- Todo Item 1 -->
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="section-title text-center mb-4 pb-2">
+                                <h4 class="title mb-4">Your Todo Notes</h4>
+                                <p class="text-muted para-desc mx-auto mb-0">Keep Track of your todos</p>
+                            </div>
+                        </div><!--end col-->
+                    </div><!--end row-->
+                    <div class="row todos__container" id="todos__container"></div>
+                </div>
+            </div>
+        </div>
+</div>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/e19c476714.js"></script>
+<script src="script.js" async></script>
+</body>
+</html>
